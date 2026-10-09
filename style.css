@@ -136,6 +136,25 @@ form {
 
   h2 {
     margin: 0;
+    font-size: 1.25em;
+
+    a {
+      color: inherit;
+      text-decoration-color: var(--color-accent);
+      text-underline-offset: 0.2em;
+
+      &:hover {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 40 / 21;
+    object-fit: contain;
+    background: oklch(97% 0.005 250);
+    border: 1px solid var(--color-border);
   }
 
   p {
