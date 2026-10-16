@@ -1,10 +1,14 @@
 :root {
   --color-accent: oklch(55% 0.15 255);
-  --color-text: oklch(25% 0.02 250);
-  --color-muted: oklch(50% 0.02 250);
-  --color-border: oklch(80% 3% 200);
+  --color-text: light-dark(oklch(25% 0.02 250), oklch(92% 0.01 250));
+  --color-muted: light-dark(oklch(50% 0.02 250), oklch(72% 0.02 250));
+  --color-link: light-dark(var(--color-accent), oklch(from var(--color-accent) 75% c h));
+  --color-border: oklch(50% 10% 200 / 40%);
 
   accent-color: var(--color-accent);
+
+  /* Step 4.1: follow the OS color scheme by default */
+  color-scheme: light dark;
 }
 
 /* Step 1: keep content readable and centered */
@@ -16,11 +20,12 @@ body {
   color: var(--color-text);
   max-width: 100ch;
   margin-inline: max(1em, (100% - 100ch) / 2);
-  padding-block: 1rem 3rem;
+  padding-block: 3rem;
+  background: canvas;
 }
 
 a {
-  color: var(--color-accent);
+  color: var(--color-link);
 }
 
 /* Step 2: navigation bar */
@@ -30,9 +35,11 @@ nav li {
 }
 
 nav {
+  --border-color: oklch(50% 10% 200 / 40%);
+
   display: flex;
   margin-bottom: 1.5em;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--border-color);
 
   a {
     flex: 1;
@@ -42,14 +49,14 @@ nav {
     padding: 0.5em;
 
     &.current {
-      border-bottom: 0.4em solid var(--color-border);
+      border-bottom: 0.4em solid var(--border-color);
       padding-bottom: 0.1em;
     }
 
     &:hover {
       border-bottom: 0.4em solid var(--color-accent);
       padding-bottom: 0.1em;
-      background-color: oklch(from var(--color-accent) 95% 5% h);
+      background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
     }
   }
 }
@@ -76,10 +83,19 @@ img {
   border-radius: 12px;
 }
 
+/* Step 4.3: theme switcher in the top right corner */
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+}
+
 /* Step 3: contact form (grid + subgrid) */
 input,
 textarea,
-button {
+button,
+select {
   font: inherit;
 }
 
@@ -144,7 +160,7 @@ form {
       text-underline-offset: 0.2em;
 
       &:hover {
-        color: var(--color-accent);
+        color: var(--color-link);
       }
     }
   }
@@ -153,7 +169,7 @@ form {
     width: 100%;
     aspect-ratio: 40 / 21;
     object-fit: contain;
-    background: oklch(97% 0.005 250);
+    background: color-mix(in oklch, canvastext 4%, canvas);
     border: 1px solid var(--color-border);
   }
 
@@ -186,7 +202,7 @@ form {
     font-size: 1.1em;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: var(--color-accent);
+    color: var(--color-link);
     padding-bottom: 0.3em;
     border-bottom: 2px solid var(--color-accent);
   }
@@ -194,7 +210,7 @@ form {
   article {
     margin-block: 1.25em;
     padding-left: 1em;
-    border-left: 3px solid oklch(from var(--color-accent) 90% 0.04 h);
+    border-left: 3px solid color-mix(in oklch, var(--color-accent), canvas 75%);
 
     header {
       display: flex;
