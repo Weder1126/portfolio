@@ -372,7 +372,7 @@
                 <figure>
                     <img
                         src="against_d_plateau.png"
-                        alt="Scatter plot of the same 178 countries on a linear spending axis from $0 to $11,000. Most dots are bunched at the left. A gray trend line rises steeply until about $1,600, then an orange line stays flat across a shaded region above $2,000. Costa Rica (80.1 years on $910) and the United States (78.6 years on $10,624) are highlighted."
+                        alt="Scatter plot of the same 178 countries on a linear spending axis from $0 to $11,000. Most dots are bunched at the left. A gray trend line rises steeply until about $1,600, then an orange line stays flat across a shaded region above $2,000. Costa Rica (80.1 years on $910) and the United States (78.6 years on $10,624) are highlighted. A note explains that every country above $2,000 is high-income and 26 of those 28 live past 80; the key gives +9.5 years per $1,000 for the 150 countries under $2,000 and +20 days per $1,000 for the 28 over it."
                         width="1584"
                         height="880"
                     />
@@ -400,15 +400,21 @@
                     </li>
                     <li>
                         <span class="score deceptive">−2</span>
-                        <strong>The $2,000 breakpoint was chosen after looking.</strong>
+                        <strong>The $2,000 breakpoint, and the in-chart reason we give for it.</strong>
                         Among countries above $1,000 the correlation is 0.55; above $1,500 it
                         is 0.35; above $2,000 it is 0.06; above $3,000 it turns negative
                         (−0.26, but only 20 countries). We picked $2,000 because it is the
-                        round number where the link disappears, and the subtitle presents it
-                        as the place "where the steep rise levels off," as if the data had
-                        chosen it. We did not test whether a break exists at all. The
-                        honest alternative is a smooth curve (e.g., LOESS), which bends
-                        gradually and shows no clean threshold.
+                        round number where the link disappears, and we did not test whether a
+                        break exists at all. Our checkpoint feedback asked us to explain the
+                        breakpoint and the two lines inside the chart, so the subtitle now says
+                        each line is a straight-line fit to one side, and a note says why
+                        $2,000: every country above it is high-income, and 26 of those 28
+                        already live past 80. Both facts are true, but the reason came after
+                        the choice. Twenty-three other high-income countries (Chile, Greece,
+                        the Czech Republic and more) spend under $2,000, so the cut does not
+                        actually mark "rich countries." The honest alternative is a smooth
+                        curve (e.g., LOESS), which bends gradually and shows no clean
+                        threshold.
                     </li>
                     <li>
                         <span class="score deceptive">−1</span>
