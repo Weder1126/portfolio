@@ -1,1 +1,4 @@
 .DS_Store
+projects/project2/code/output/
+projects/project2/code/data/health-raw-2021.csv
+__pycache__/
