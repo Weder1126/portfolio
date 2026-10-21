@@ -1,0 +1,179 @@
+country,code,region,spend,life
+"Congo, Dem. Rep.",COD,Sub-Saharan Africa,18.51,60.37
+Madagascar,MDG,Sub-Saharan Africa,22.05,66.68
+"Gambia, The",GMB,Sub-Saharan Africa,22.16,61.74
+Eritrea,ERI,Sub-Saharan Africa,23.79,65.94
+Burundi,BDI,Sub-Saharan Africa,24.03,61.25
+Ethiopia,ETH,Sub-Saharan Africa,24.23,66.24
+South Sudan,SSD,Sub-Saharan Africa,26.79,57.6
+Chad,TCD,Sub-Saharan Africa,29.24,53.98
+Niger,NER,Sub-Saharan Africa,30.36,62.02
+Benin,BEN,Sub-Saharan Africa,30.94,61.47
+Mali,MLI,Sub-Saharan Africa,34.95,58.89
+Malawi,MWI,Sub-Saharan Africa,35.5,63.8
+Tanzania,TZA,Sub-Saharan Africa,36.82,65.02
+Guinea,GIN,Sub-Saharan Africa,38.32,61.18
+Burkina Faso,BFA,Sub-Saharan Africa,40.25,61.17
+Mozambique,MOZ,Sub-Saharan Africa,40.26,60.16
+Togo,TGO,Sub-Saharan Africa,41.84,60.76
+Bangladesh,BGD,South Asia,41.91,72.32
+Pakistan,PAK,South Asia,42.87,67.11
+Uganda,UGA,Sub-Saharan Africa,43.14,62.97
+Liberia,LBR,Sub-Saharan Africa,45.42,63.73
+"Congo, Rep.",COG,Sub-Saharan Africa,47.52,64.29
+Afghanistan,AFG,South Asia,49.84,64.49
+Guinea-Bissau,GNB,Sub-Saharan Africa,53.29,58.0
+Central African Republic,CAF,Sub-Saharan Africa,53.66,52.8
+Cameroon,CMR,Sub-Saharan Africa,54.14,58.92
+Mauritania,MRT,Sub-Saharan Africa,54.49,64.7
+Lao PDR,LAO,East Asia & Pacific,57.11,67.61
+Nepal,NPL,South Asia,57.85,70.48
+Rwanda,RWA,Sub-Saharan Africa,58.31,68.7
+Senegal,SEN,Sub-Saharan Africa,58.9,67.67
+Myanmar,MMR,East Asia & Pacific,59.21,66.87
+Tajikistan,TJK,Europe & Central Asia,59.84,70.88
+Sudan,SDN,Sub-Saharan Africa,60.17,65.1
+Papua New Guinea,PNG,East Asia & Pacific,63.77,64.26
+Haiti,HTI,Latin America & Caribbean,64.25,63.66
+Comoros,COM,Sub-Saharan Africa,65.23,64.12
+Djibouti,DJI,Middle East & North Africa,70.86,66.58
+Cote d'Ivoire,CIV,Sub-Saharan Africa,71.88,57.42
+India,IND,South Asia,72.83,69.42
+Zambia,ZMB,Sub-Saharan Africa,75.99,63.51
+Ghana,GHA,Sub-Saharan Africa,77.91,63.78
+Uzbekistan,UZB,Europe & Central Asia,82.27,71.57
+Nigeria,NGA,Sub-Saharan Africa,83.75,54.33
+Kyrgyz Republic,KGZ,Europe & Central Asia,85.74,71.4
+Sierra Leone,SLE,Sub-Saharan Africa,85.78,54.31
+Angola,AGO,Sub-Saharan Africa,87.62,60.78
+Kenya,KEN,Sub-Saharan Africa,88.39,66.34
+Cambodia,KHM,East Asia & Pacific,90.56,69.57
+Timor-Leste,TLS,East Asia & Pacific,93.69,69.26
+Solomon Islands,SLB,East Asia & Pacific,94.96,72.83
+Bhutan,BTN,South Asia,102.74,71.46
+Vanuatu,VUT,East Asia & Pacific,105.39,70.32
+Indonesia,IDN,East Asia & Pacific,111.68,71.51
+Lesotho,LSO,Sub-Saharan Africa,124.79,53.7
+Sao Tome and Principe,STP,Sub-Saharan Africa,125.4,70.17
+"Egypt, Arab Rep.",EGY,Middle East & North Africa,125.55,71.82
+Philippines,PHL,East Asia & Pacific,136.54,71.1
+Zimbabwe,ZWE,Sub-Saharan Africa,140.32,61.2
+Vietnam,VNM,East Asia & Pacific,151.69,75.32
+Mongolia,MNG,East Asia & Pacific,155.09,69.69
+Sri Lanka,LKA,South Asia,157.47,76.81
+Azerbaijan,AZE,Europe & Central Asia,165.77,72.86
+Nicaragua,NIC,Latin America & Caribbean,173.77,74.28
+Morocco,MAR,Middle East & North Africa,174.78,76.45
+Honduras,HND,Latin America & Caribbean,176.25,75.09
+Cabo Verde,CPV,Sub-Saharan Africa,194.86,72.78
+Kiribati,KIR,East Asia & Pacific,196.85,68.12
+Moldova,MDA,Europe & Central Asia,212.97,71.81
+Fiji,FJI,East Asia & Pacific,214.55,67.34
+Gabon,GAB,Sub-Saharan Africa,218.37,66.19
+Bolivia,BOL,Latin America & Caribbean,223.6,71.24
+Samoa,WSM,East Asia & Pacific,227.33,73.19
+Ukraine,UKR,Europe & Central Asia,228.39,71.58
+Tonga,TON,East Asia & Pacific,236.93,70.8
+Iraq,IRQ,Middle East & North Africa,239.41,70.45
+Tunisia,TUN,Middle East & North Africa,251.55,76.5
+Algeria,DZA,Middle East & North Africa,255.87,76.69
+"Venezuela, RB",VEN,Latin America & Caribbean,256.95,72.13
+Guatemala,GTM,Latin America & Caribbean,259.62,74.06
+Eswatini,SWZ,Sub-Saharan Africa,271.14,59.4
+Albania,ALB,Europe & Central Asia,274.91,78.46
+Kazakhstan,KAZ,Europe & Central Asia,275.85,73.15
+Thailand,THA,East Asia & Pacific,275.92,76.93
+Belize,BLZ,Latin America & Caribbean,285.99,74.5
+El Salvador,SLV,Latin America & Caribbean,288.52,73.1
+Guyana,GUY,Latin America & Caribbean,295.56,69.77
+Georgia,GEO,Europe & Central Asia,312.75,73.6
+Equatorial Guinea,GNQ,Sub-Saharan Africa,314.3,58.4
+Jamaica,JAM,Latin America & Caribbean,320.98,74.37
+St. Vincent and the Grenadines,VCT,Latin America & Caribbean,329.26,72.42
+Jordan,JOR,Middle East & North Africa,330.14,74.4
+Belarus,BLR,Europe & Central Asia,356.25,74.18
+Peru,PER,Latin America & Caribbean,369.08,76.52
+Turkey,TUR,Europe & Central Asia,389.87,77.44
+North Macedonia,MKD,Europe & Central Asia,399.1,75.69
+Paraguay,PRY,Latin America & Caribbean,400.39,74.13
+"Micronesia, Fed. Sts.",FSM,East Asia & Pacific,415.82,67.76
+Armenia,ARM,Europe & Central Asia,422.28,74.94
+Malaysia,MYS,East Asia & Pacific,427.22,76.0
+Turkmenistan,TKM,Europe & Central Asia,460.18,68.07
+Dominican Republic,DOM,Latin America & Caribbean,461.54,73.89
+St. Lucia,LCA,Latin America & Caribbean,464.71,76.06
+Namibia,NAM,Sub-Saharan Africa,471.49,63.37
+Suriname,SUR,Latin America & Caribbean,474.13,71.57
+Grenada,GRD,Latin America & Caribbean,474.53,72.38
+Botswana,BWA,Sub-Saharan Africa,482.96,69.28
+"Iran, Islamic Rep.",IRN,Middle East & North Africa,484.29,76.48
+China,CHN,East Asia & Pacific,501.06,76.7
+Colombia,COL,Latin America & Caribbean,513.16,77.11
+Ecuador,ECU,Latin America & Caribbean,516.25,76.8
+Mexico,MEX,Latin America & Caribbean,519.61,74.99
+South Africa,ZAF,Sub-Saharan Africa,525.96,63.86
+Bosnia and Herzegovina,BIH,Europe & Central Asia,539.55,77.26
+Russian Federation,RUS,Europe & Central Asia,609.01,72.66
+Serbia,SRB,Europe & Central Asia,617.09,75.89
+Mauritius,MUS,Sub-Saharan Africa,653.35,74.42
+Oman,OMN,Middle East & North Africa,678.23,77.63
+Lebanon,LBN,Middle East & North Africa,686.47,78.88
+Romania,ROU,Europe & Central Asia,687.25,75.36
+Bulgaria,BGR,Europe & Central Asia,689.91,74.96
+Montenegro,MNE,Europe & Central Asia,731.48,76.77
+Brunei Darussalam,BRN,East Asia & Pacific,763.15,75.72
+Seychelles,SYC,Sub-Saharan Africa,833.08,72.84
+Brazil,BRA,Latin America & Caribbean,848.39,75.67
+Antigua and Barbuda,ATG,Latin America & Caribbean,875.17,76.89
+Costa Rica,CRI,Latin America & Caribbean,909.67,80.1
+Maldives,MDV,South Asia,973.54,78.63
+Poland,POL,Europe & Central Asia,978.74,77.6
+Cuba,CUB,Latin America & Caribbean,986.94,78.73
+Bahrain,BHR,Middle East & North Africa,994.18,77.16
+Croatia,HRV,Europe & Central Asia,1014.22,78.07
+Hungary,HUN,Europe & Central Asia,1081.8,76.07
+Latvia,LVA,Europe & Central Asia,1101.49,74.78
+Trinidad and Tobago,TTO,Latin America & Caribbean,1123.42,73.38
+Argentina,ARG,Latin America & Caribbean,1127.91,76.52
+Panama,PAN,Latin America & Caribbean,1131.66,78.33
+Barbados,BRB,Latin America & Caribbean,1164.54,79.08
+Lithuania,LTU,Europe & Central Asia,1249.25,75.68
+Slovak Republic,SVK,Europe & Central Asia,1299.91,77.27
+Chile,CHL,Latin America & Caribbean,1455.61,80.04
+Saudi Arabia,SAU,Middle East & North Africa,1484.59,75.0
+Estonia,EST,Europe & Central Asia,1552.97,78.24
+Greece,GRC,Europe & Central Asia,1566.9,81.79
+Uruguay,URY,Latin America & Caribbean,1590.05,77.77
+Kuwait,KWT,Middle East & North Africa,1711.22,75.4
+Qatar,QAT,Middle East & North Africa,1716.27,80.1
+Czech Republic,CZE,Europe & Central Asia,1765.59,79.03
+United Arab Emirates,ARE,Middle East & North Africa,1817.35,77.81
+Cyprus,CYP,Europe & Central Asia,1954.41,80.83
+"Bahamas, The",BHS,Latin America & Caribbean,2013.38,73.75
+Slovenia,SVN,Europe & Central Asia,2169.58,81.38
+Portugal,PRT,Europe & Central Asia,2215.17,81.32
+"Korea, Rep.",KOR,East Asia & Pacific,2542.82,82.63
+Spain,ESP,Europe & Central Asia,2736.32,83.43
+Malta,MLT,Middle East & North Africa,2753.51,82.45
+Singapore,SGP,East Asia & Pacific,2823.64,83.3
+Italy,ITA,Europe & Central Asia,2989.0,83.35
+Israel,ISR,Middle East & North Africa,3323.65,82.8
+New Zealand,NZL,East Asia & Pacific,4037.46,81.86
+Japan,JPN,East Asia & Pacific,4266.59,84.21
+United Kingdom,GBR,Europe & Central Asia,4315.43,81.26
+Finland,FIN,Europe & Central Asia,4515.68,81.73
+France,FRA,Europe & Central Asia,4690.07,82.72
+Belgium,BEL,Europe & Central Asia,4912.7,81.6
+Canada,CAN,North America,4994.9,82.05
+Netherlands,NLD,Europe & Central Asia,5306.53,81.81
+Austria,AUT,Europe & Central Asia,5326.44,81.69
+Australia,AUS,East Asia & Pacific,5425.34,82.75
+Germany,DEU,Europe & Central Asia,5472.2,80.89
+Ireland,IRL,Europe & Central Asia,5489.07,82.26
+Sweden,SWE,Europe & Central Asia,5981.71,82.56
+Denmark,DNK,Europe & Central Asia,6216.77,80.95
+Luxembourg,LUX,Europe & Central Asia,6227.08,82.3
+Iceland,ISL,Europe & Central Asia,6530.93,82.86
+Norway,NOR,Europe & Central Asia,8239.1,82.76
+Switzerland,CHE,Europe & Central Asia,9870.66,83.75
+United States,USA,North America,10623.85,78.64

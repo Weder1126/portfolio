@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Project 2 Report</title>
+        <style>
+            :root {
+                --color-neutral-95: hsl(220 10% 95%);
+                --color-neutral-90: hsl(220 10% 90%);
+                --color-neutral-80: hsl(220 10% 80%);
+                --color-neutral-70: hsl(220 10% 70%);
+                --color-neutral-60: hsl(220 10% 60%);
+                --color-neutral-50: hsl(220 10% 50%);
+                --color-neutral-40: hsl(220 10% 40%);
+                --color-neutral-30: hsl(220 10% 30%);
+                --color-neutral-20: hsl(220 10% 20%);
+                --color-neutral-10: hsl(220 10% 10%);
+                --color-for: #2a78d6;
+                --color-against: #eb6834;
+                --color-deceptive: #b42318;
+                --color-deceptive-bg: #fee4e2;
+                --color-earnest: #067647;
+                --color-earnest-bg: #dcfae6;
+            }
+
+            html {
+                font: 100%/1.5 system-ui;
+                counter-reset: figure;
+                background: var(--color-neutral-95);
+                max-width: min(75vw, 80em);
+                margin: 0 auto;
+            }
+
+            /* Headings */
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                line-height: 1.1;
+                font-weight: 600;
+                text-wrap: balance;
+            }
+
+            h1,
+            h2 {
+                border-bottom: 1px solid var(--color-neutral-80);
+                padding-bottom: 0.2em;
+            }
+
+            h1 {
+                margin-block: 1em 0.5rem;
+                font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
+                font-weight: 800;
+
+                small {
+                    display: block;
+                    width: fit-content;
+                    padding: 0.2em 0.5em;
+                    margin-inline: auto;
+                    color: white;
+                    background: var(--color-neutral-40);
+                    font-size: 40%;
+                    text-transform: uppercase;
+                    white-space: nowrap;
+                }
+            }
+
+            h2 {
+                font-size: 180%;
+                color: var(--color-neutral-30);
+            }
+
+            h3 {
+                font-size: 130%;
+            }
+
+            /* Lists */
+
+            ul,
+            ol {
+                padding-inline-start: 2em;
+            }
+
+            li {
+                &::marker {
+                    color: var(--color-neutral-40);
+                }
+
+                + li {
+                    margin-top: 0.2em;
+                }
+            }
+
+            /* Sectioning elements */
+
+            header {
+                padding-block: 1em;
+                text-align: center;
+            }
+
+            main {
+                background: white;
+                color: var(--color-neutral-20);
+                border-radius: 1rem;
+                padding: 0.1rem 2rem;
+            }
+
+            /* Figures */
+
+            figure {
+                margin: 1em 0;
+                padding: 0.5rem;
+                margin-inline: -0.5em;
+                border: 1px solid var(--color-neutral-80);
+                box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
+                text-align: center;
+                background: white;
+
+                > figcaption {
+                    font: 500 75% var(--font-sans);
+                    background: var(--color-neutral-95);
+                    padding: 0.5rem;
+                    margin: -0.5rem;
+                    margin-top: 0.5rem;
+                    counter-increment: figure;
+                    text-align: left;
+
+                    &::before {
+                        content: "Figure " counter(figure) ": ";
+                        font-weight: bold;
+                        color: var(--color-neutral-40);
+                    }
+
+                    a:not(:hover, :focus, :active) {
+                        color: inherit;
+                        text-decoration: underline;
+                        text-decoration-color: color-mix(
+                            in lab,
+                            currentColor,
+                            transparent 70%
+                        );
+                    }
+                }
+            }
+
+            /* Additions to the course template */
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .members {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.25em 1.5em;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                li + li {
+                    margin-top: 0;
+                }
+            }
+
+            .side-for {
+                color: var(--color-for);
+            }
+
+            .side-against {
+                color: var(--color-against);
+            }
+
+            .note {
+                color: var(--color-neutral-40);
+                font-size: 90%;
+            }
+
+            .decisions > li {
+                margin-bottom: 0.8em;
+            }
+
+            .score {
+                display: inline-block;
+                min-width: 4.2em;
+                margin-right: 0.4em;
+                padding: 0 0.45em;
+                border-radius: 0.3em;
+                font-weight: 700;
+                font-variant-numeric: tabular-nums;
+                text-align: center;
+
+                &.deceptive {
+                    color: var(--color-deceptive);
+                    background: var(--color-deceptive-bg);
+                }
+
+                &.earnest {
+                    color: var(--color-earnest);
+                    background: var(--color-earnest-bg);
+                }
+            }
+
+            .explorer-controls {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 0.6em 1.4em;
+                margin-bottom: 0.5em;
+                font-size: 90%;
+
+                button {
+                    font: inherit;
+                    padding: 0.25em 0.8em;
+                    border: 1px solid var(--color-neutral-70);
+                    border-radius: 0.3em;
+                    background: white;
+                    cursor: pointer;
+
+                    &[aria-pressed="true"] {
+                        color: white;
+                        background: var(--color-neutral-30);
+                        border-color: var(--color-neutral-30);
+                    }
+                }
+
+                input[type="range"] {
+                    vertical-align: middle;
+                }
+            }
+
+            #explorer-chart svg {
+                width: 100%;
+                height: auto;
+                font: 12px system-ui;
+            }
+
+            #explorer-readout {
+                min-height: 3em;
+                margin: 0.3em 0 0;
+                font-size: 90%;
+                font-variant-numeric: tabular-nums;
+            }
+
+            @media (max-width: 40em) {
+                html {
+                    max-width: none;
+                    padding-inline: 16px;
+                }
+
+                main {
+                    padding: 0.1rem 1rem;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <small>Project 2</small>
+                Persuasive or Deceptive Visualization?
+            </h1>
+
+            <ul class="members">
+                <li><strong>Jacey Chow</strong> — <em>j6chow@ucsd.edu</em></li>
+                <li><strong>Weder Qin</strong> — <em>w7qin@ucsd.edu</em></li>
+                <li><strong>Maggie Shao</strong> — <em>yis082@ucsd.edu</em></li>
+                <li><strong>Jingyun Xiong</strong> — <em>j8xiong@ucsd.edu</em></li>
+            </ul>
+        </header>
+
+        <main>
+            <h2>Proposition: Spending more on health care leads to longer lives.</h2>
+
+            <p>
+                <strong>Data.</strong> World Bank Human Development Indicators (health
+                category): current health expenditure per person in US dollars
+                (<code>SH.XPD.CHEX.PC.CD</code>) and life expectancy at birth
+                (<code>SP.DYN.LE00.IN</code>). We use 2018, the latest year with spending
+                data, and keep the 178 countries that report both values. Regional and
+                income-group aggregates are removed. Both figures below are drawn from
+                exactly the same 178 rows.
+            </p>
+            <p class="note">
+                Each design decision is scored from −2 (fully deceptive) to +2 (fully
+                earnest).
+            </p>
+
+            <section>
+                <h3 class="side-for">FOR the Proposition</h3>
+
+                <figure>
+                    <img
+                        src="for_a_doubling.png"
+                        alt="Scatter plot of 178 countries, health spending per person on a log scale from $25 to $6,400 against life expectancy from 50 to 85 years. A blue straight line rises from DR Congo at about 60 years to Japan at about 84 years. Label: +2.7 years per doubling."
+                        width="1584"
+                        height="880"
+                    />
+                    <figcaption>
+                        Every doubling of health spending per person goes with about 2.7
+                        more years of life expectancy (least-squares fit of life
+                        expectancy on log₂ spending, r = 0.84). 178 countries, 2018.
+                    </figcaption>
+                </figure>
+
+                <p>Design Decisions and Rationale:</p>
+
+                <ul class="decisions">
+                    <li>
+                        <span class="score earnest">+0.5</span>
+                        <strong>A log₂ spending axis with a straight fitted line.</strong>
+                        Spending runs from $19 (DR Congo) to $10,624 (United States), a
+                        570-fold range, so a log axis is the textbook choice and we label it
+                        "(log scale)". It also does the persuading: the curve becomes one
+                        steady staircase with no ceiling, which is the shape of our claim.
+                        What the axis hides is cost. A doubling is $25 at the left edge and
+                        $5,000 at the right, so equal-looking steps get 200 times more
+                        expensive. A single straight line also implies the same return
+                        everywhere, although the countries above $2,000 gain only 0.5 years
+                        per doubling (r = 0.17). The alternative, a linear axis, makes the rich
+                        countries look like a plateau, which is Figure 2's argument.
+                    </li>
+                    <li>
+                        <span class="score deceptive">−1.5</span>
+                        <strong>A causal headline: spending "adds" years.</strong>
+                        The data are one year of cross-country snapshots, so they show an
+                        association. Richer countries also have better food, water,
+                        sanitation and schooling, and health spending partly stands in for
+                        national income, which the chart never mentions. "Adds" reads like a
+                        rate of return and gives the reader a number to remember ("nearly 3
+                        years"). We considered "is linked to," which is accurate but much
+                        weaker. Kong et al. found that a slanted title shapes what readers
+                        recall even when the chart is the same, and that is why we kept the
+                        verb. The figure caption on this page uses the accurate wording.
+                    </li>
+                    <li>
+                        <span class="score deceptive">−1</span>
+                        <strong>Which countries get a name.</strong>
+                        We label four countries spread along the line: DR Congo, India,
+                        Brazil and Japan. All four sit on the line or above it, so the labels
+                        act like a guided tour that confirms the line. The
+                        United States is the largest miss of any country spending over
+                        $4,000 (7.2 years below the line), and we leave it as an unlabeled
+                        gray dot at the far right. Naming it would hand the reader the
+                        obvious counterexample. Labeling the U.S. was the alternative,
+                        but we expected it to become the story of the chart.
+                    </li>
+                    <li>
+                        <span class="score earnest">+2</span>
+                        <strong>All 178 countries, a shared y-axis, and the source.</strong>
+                        Every country is drawn, including the wide spread among the poorest
+                        (life expectancy from 53 to 73 years below $100 a person). The y-axis
+                        runs from 50 to 88 years, the same as Figure 2, so the two charts
+                        can be compared directly. Starting above zero is standard for dot
+                        positions and does not stretch any gap. Year, country count and
+                        source are printed on the chart. Showing the scatter costs some
+                        tidiness, but it is what makes the line believable.
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3 class="side-against">AGAINST the Proposition</h3>
+
+                <figure>
+                    <img
+                        src="against_d_plateau.png"
+                        alt="Scatter plot of the same 178 countries on a linear spending axis from $0 to $11,000. Most dots are bunched at the left. A gray trend line rises steeply until about $1,600, then an orange line stays flat across a shaded region above $2,000. Costa Rica (80.1 years on $910) and the United States (78.6 years on $10,624) are highlighted."
+                        width="1584"
+                        height="880"
+                    />
+                    <figcaption>
+                        On a dollar scale, countries above $2,000 per person show almost no
+                        link between spending and life expectancy (r = 0.06, 28 countries).
+                        Separate least-squares lines below and above $2,000. 178 countries,
+                        2018.
+                    </figcaption>
+                </figure>
+
+                <p>Design Decisions and Rationale:</p>
+
+                <ul class="decisions">
+                    <li>
+                        <span class="score deceptive">−1</span>
+                        <strong>A linear dollar axis.</strong>
+                        Dollars are the unit that budgets are paid in, so a linear axis
+                        looks like the plain, honest default, and an extra $1,000 means the
+                        same thing everywhere on it. But it squeezes 150 of the 178 countries
+                        (84%) into the left 18% of the plot, where the steep climb becomes a
+                        short smear. The right side, where 28 rich countries spread over
+                        $8,000, becomes a wide, flat plain. These are the same points as Figure 1. We kept the axis unlabeled as "linear" because readers
+                        assume it.
+                    </li>
+                    <li>
+                        <span class="score deceptive">−2</span>
+                        <strong>The $2,000 breakpoint was chosen after looking.</strong>
+                        Among countries above $1,000 the correlation is 0.55; above $1,500 it
+                        is 0.35; above $2,000 it is 0.06; above $3,000 it turns negative
+                        (−0.26, but only 20 countries). We picked $2,000 because it is the
+                        round number where the link disappears, and the subtitle presents it
+                        as the place "where the steep rise levels off," as if the data had
+                        chosen it. We did not test whether a break exists at all. The
+                        honest alternative is a smooth curve (e.g., LOESS), which bends
+                        gradually and shows no clean threshold.
+                    </li>
+                    <li>
+                        <span class="score deceptive">−1</span>
+                        <strong>A joined "hockey stick" and where the color goes.</strong>
+                        The two fitted lines are drawn to meet where they cross (about
+                        $1,600) instead of as two separate segments, so the break looks like
+                        one natural curve. The rising line is muted gray, while the flat line
+                        gets the bold orange and the shaded background, so the eye lands on
+                        "flat." Orange is a warm, warning-style color that fits a "money is
+                        being wasted" reading. Drawn as two separate segments, the rising line
+                        would end above the flat one, a visible jump at $2,000 that invites
+                        questions about the cut.
+                    </li>
+                    <li>
+                        <span class="score deceptive">−1</span>
+                        <strong>Annotations: "+20 days" and a hand-picked contrast.</strong>
+                        The key reports the low group in years (+9.5 years per $1,000) and the
+                        high group in days (+20 days per $1,000), so the second number looks
+                        trivial next to the first. That slope leans on one country: without
+                        the U.S. it is +104 days. We then annotate the U.S. (78.6 years on
+                        $10,624) next to Costa Rica (80.1 years on $910). Costa Rica is the
+                        only country in the data that reaches 80 years on under $1,000, so it
+                        is the most flattering comparison available, not a typical one.
+                    </li>
+                    <li>
+                        <span class="score earnest">+1.5</span>
+                        <strong>Nothing removed, same frame as Figure 1.</strong>
+                        All 178 countries are plotted on the same 50 to 88 year axis as
+                        Figure 1, the slopes and country counts are printed in the key, and
+                        the source is on the chart. We also drafted a "top 15 spenders"
+                        version that dropped the other 163 countries. It was more dramatic,
+                        but a careful reader would ask what was left out, so keeping
+                        everything made the flat line harder to dismiss.
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Final Reflection</h2>
+
+                <figure>
+                    <div class="explorer-controls" role="group" aria-label="Chart controls">
+                        <span>
+                            Spending axis:
+                            <button type="button" data-scale="log" aria-pressed="true">
+                                Log (Figure 1)
+                            </button>
+                            <button type="button" data-scale="linear" aria-pressed="false">
+                                Dollars (Figure 2)
+                            </button>
+                        </span>
+                        <label>
+                            Breakpoint:
+                            <input
+                                id="explorer-break"
+                                type="range"
+                                min="500"
+                                max="4000"
+                                step="250"
+                                value="2000"
+                            />
+                            <output id="explorer-break-value">$2,000</output>
+                        </label>
+                        <label>
+                            <input id="explorer-drop-us" type="checkbox" />
+                            Leave out the United States
+                        </label>
+                    </div>
+                    <div id="explorer-chart"></div>
+                    <p id="explorer-readout" aria-live="polite"></p>
+                    <figcaption>
+                        The same 178 countries behind Figures 1 and 2. Switch the axis, move
+                        the breakpoint, or drop the U.S. to see how each choice changes the
+                        story. Blue: one line fitted on log₂ spending. Gray and orange:
+                        separate straight lines below and above the breakpoint, drawn here
+                        unjoined. Hover a dot for the country.
+                    </figcaption>
+                </figure>
+
+                <p>
+                    We drafted four charts for the checkpoint and kept the two that share
+                    the same 178 dots. Nothing in the data changes between Figure 1 and
+                    Figure 2. What changes is the x-axis scale, which line we fit, which
+                    countries get a name, and a few verbs. The "for" side was easy, almost
+                    too easy: on a log axis the correlation is 0.84 and the chart argues for
+                    itself, so our main work was making the title promise more than the
+                    data can. The "against" side was hard, because the overall pattern is
+                    against it. We had to look for a range where the link disappears, and
+                    every route there (a top-15 cut, a breakpoint, a linear axis) meant
+                    choosing a subset or scale because of the answer it gave. What
+                    surprised us most was how much rested on one country. The U.S. alone
+                    moves Figure 2's headline slope from +104 days to +20 days per $1,000,
+                    and leaving it unlabeled is a big part of why Figure 1 looks so clean.
+                    It also surprised us that the most persuasive choices looked the most
+                    routine. Nobody questions a log axis or a round-number threshold, which
+                    is exactly why they work.
+                </p>
+                <p>
+                    Before this project we thought of ethical visualization as "don't lie
+                    with the data." Both of our figures pass that test and still reach
+                    opposite conclusions, so that definition is not enough. We now think of
+                    ethical analysis and visualization as making choices that you would be
+                    willing to disclose and defend, and that leave readers able to
+                    reconstruct the other side from what is on the page. Figure 1 partly
+                    does this: every dot is there and the scale is labeled, so a careful
+                    reader can see the U.S. sitting low. Figure 2 does it less well. The
+                    breakpoint and the unit switch to days are invisible unless you already
+                    know to ask. The honest summary is somewhere between our two charts:
+                    spending and life expectancy are strongly related across the world, the
+                    return per extra dollar shrinks quickly, and none of this shows that
+                    spending is the cause.
+                </p>
+                <p>
+                    We do not think the line between acceptable and misleading can be drawn
+                    by technique, because the same technique can be either. A log axis is
+                    honest for data that span 570-fold and misleading if it hides that
+                    costs explode. Instead, we ended up with three questions. First, is the
+                    choice made because it fits the data and the question, or because it
+                    produces the answer we want? Our breakpoint fails this; the log axis
+                    mostly passes. Second, does the claim survive small, reasonable changes,
+                    such as dropping one country or moving a threshold by $500? The
+                    interactive chart above shows that Figure 1's slope barely moves
+                    without the U.S. (2.73 to 2.77 years per doubling), while Figure 2's
+                    "+20 days" becomes +104 days without the U.S., +128 days with the cut at
+                    $1,500, and −79 days with the cut at $2,500. Third, does the language
+                    match the evidence? Both of our titles fail here, since a causal verb
+                    needs more than one year of correlations. A chart that passes all three
+                    can still be persuasive. It just persuades with the data instead of
+                    around it.
+                </p>
+            </section>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+        <script src="explorer.js"></script>
+    </body>
+</html>
