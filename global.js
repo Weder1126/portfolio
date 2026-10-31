@@ -173,7 +173,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
   if (!Array.isArray(projects) || projects.length === 0) {
     const empty = document.createElement('p');
     empty.className = 'projects-empty';
-    empty.textContent = 'No projects to show yet.';
+    empty.textContent = 'No projects match.';
     containerElement.append(empty);
     return;
   }

@@ -186,6 +186,110 @@ form {
   }
 }
 
+/* Lab 5: pie chart, legend and search on the projects page */
+.pie-container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin-block: 2em;
+}
+
+#projects-pie-plot {
+  flex: 0 0 auto;
+  width: min(15em, 40%);
+  overflow: visible;
+
+  path {
+    cursor: pointer;
+    transition: 300ms;
+    stroke: canvas;
+    stroke-width: 0.5;
+
+    &:focus-visible {
+      outline: none;
+      stroke: canvastext;
+      stroke-width: 1.5;
+    }
+  }
+
+  &:has(path:hover) path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+.legend {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
+  gap: 1em;
+  margin: 0;
+  padding: 1em;
+  list-style: none;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+
+  em {
+    color: var(--color-muted);
+  }
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: var(--color);
+}
+
+/* Selected year: same highlight color on the wedge and its legend item */
+.selected {
+  --color: oklch(50% 0.25 300) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+
+  &:is(li) {
+    font-weight: 600;
+  }
+}
+
+.searchBar {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1.5em;
+  padding: 0.6em 0.8em;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.projects-empty {
+  grid-column: 1 / -1;
+  color: var(--color-muted);
+}
+
+@media (max-width: 30em) {
+  .pie-container {
+    flex-direction: column;
+  }
+
+  #projects-pie-plot {
+    width: 70%;
+  }
+
+  .legend {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
 /* Lab 4: GitHub stats on the home page */
 #profile-stats {
   margin-block: 2em;
