@@ -150,7 +150,8 @@ form {
     gap: 0.5em;
   }
 
-  h2 {
+  h2,
+  h3 {
     margin: 0;
     font-size: 1.25em;
 
@@ -175,6 +176,47 @@ form {
 
   p {
     margin: 0;
+  }
+
+  .project-year {
+    margin-top: 0.4em;
+    color: var(--color-muted);
+    font-family: Baskerville, Georgia, serif;
+    font-variant-numeric: oldstyle-nums;
+  }
+}
+
+/* Lab 4: GitHub stats on the home page */
+#profile-stats {
+  margin-block: 2em;
+  padding: 1em 1.25em;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+
+  h2 {
+    margin-top: 0;
+    font-size: 1.25em;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0;
+  }
+
+  dt {
+    grid-row: 1;
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-muted);
+  }
+
+  dd {
+    grid-row: 2;
+    margin: 0;
+    font-size: 200%;
+    font-weight: 600;
   }
 }
 

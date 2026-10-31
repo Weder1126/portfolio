@@ -1,0 +1,93 @@
+[
+  {
+    "title": "Health Spending: Persuasive or Deceptive?",
+    "year": "2026",
+    "url": "projects/project2/",
+    "image": "projects/project2/for_a_doubling.png",
+    "alt": "Scatter plot of health spending per person on a log scale against life expectancy for 178 countries, with a rising trend line",
+    "description": "DSC 106 Project 2 with Jacey Chow, Maggie Shao and Jingyun Xiong. Two charts of the same 178 countries argue for and against \"spending more on health care leads to longer lives,\" with each design choice scored from deceptive to earnest."
+  },
+  {
+    "title": "Ultra-Processed Food Prices",
+    "year": "2026",
+    "image": "images/projects/grocery.png",
+    "alt": "Line chart of median price per 100 calories by food processing score for Walmart, Target and Whole Foods",
+    "description": "DSC 106 Project 1. Uses GroceryDB to show that the most processed foods have the cheapest calories at Walmart, Target and Whole Foods. Built with pandas and Matplotlib."
+  },
+  {
+    "title": "Pocket Coach: AI Dating Coach",
+    "year": "2026",
+    "url": "https://coach.cupify.love",
+    "image": "images/projects/pocket-coach.png",
+    "alt": "Pocket Coach preview: an AI dating coach for iPhone",
+    "description": "Cupify's iPhone app. Users can talk through a situation on a voice call, get a 3-stop date route built from what they know about the other person, and see 3 reply suggestions that range from bold to reserved."
+  },
+  {
+    "title": "Cupify: Love Personality Test",
+    "year": "2025",
+    "url": "https://cupify.love",
+    "image": "images/projects/cupify.png",
+    "alt": "Cupify home page preview: a love personality test",
+    "description": "A 4-minute relationship personality test from my startup, CyberWill. It scores users on 4 dimensions, maps them to 16 love personality types, and checks compatibility between two result IDs. It also includes an AI advisor for relationship questions."
+  },
+  {
+    "title": "LoL: Blue Side vs Red Side",
+    "year": "2026",
+    "url": "https://weder1126.github.io/lol-blue-vs-red/",
+    "image": "images/projects/lol-blue-vs-red.png",
+    "alt": "Bar chart of Blue- vs Red-side win rate in 10 tier-1 League of Legends leagues, 2022 season",
+    "description": "DSC 80 project with Kevin Cui. Across 12,529 pro games from 2022, Blue side won 52.5% of the time and Red side 47.5% (permutation test, p < 0.0001). A logistic regression built on each team's prior win rate predicts the winner with 58.7% accuracy."
+  },
+  {
+    "title": "Grand Slam Serve Analysis",
+    "year": "2025",
+    "url": "https://github.com/COGS108/Group146_WI26",
+    "image": "images/projects/grand-slam-serve.png",
+    "alt": "Box plots of first- and second-serve win percentage on clay, grass and hard courts in 2024 Grand Slams",
+    "description": "COGS 108 group project. Using 970 player-level observations from 485 Grand Slam matches in 2024, we found first-serve win rates differ significantly by court surface (Kruskal-Wallis H = 61.21, p < 0.001). Grass is highest and clay lowest."
+  },
+  {
+    "title": "This Portfolio",
+    "year": "2026",
+    "url": "https://github.com/Weder1126/portfolio",
+    "image": "images/projects/portfolio.jpg",
+    "alt": "Screenshot of this portfolio's resume page",
+    "description": "Hand-written HTML, CSS and JavaScript with no framework. The nav, theme switch and these project cards are all built by JavaScript, and the cards are loaded from a JSON file."
+  },
+  {
+    "title": "Global Energy Chart Critique",
+    "year": "2026",
+    "url": "https://ourworldindata.org/grapher/global-primary-energy-by-source",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "alt": "",
+    "description": "DSC 106 Project 2.5 with Jacey Chow, Maggie Shao and Jingyun Xiong. A video critique of Our World in Data's stacked area chart of global energy use by source from 1800 to 2025: its marks and channels, what it shows well, and what we would redesign."
+  },
+  {
+    "title": "Chinese Equity Market Research",
+    "year": "2023",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "alt": "",
+    "description": "Summer work at Zheshang Securities in Beijing. I combined financial data, pricing trends and competitive positioning across several sectors into research reports for management, and led a team analysis that shaped new marketing plans."
+  },
+  {
+    "title": "Interactive Visualization (coming soon)",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "alt": "",
+    "description": "Placeholder for DSC 106 Project 3: an interactive visualization built with D3."
+  },
+  {
+    "title": "DSC 106 Final Project (coming soon)",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "alt": "",
+    "description": "Placeholder for the DSC 106 final project: an interactive, explorable data story."
+  },
+  {
+    "title": "Placeholder Project",
+    "year": "2024",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "alt": "",
+    "description": "Placeholder entry so the list has 12 projects for the next lab. Replace it with a real project."
+  }
+]
