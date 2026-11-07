@@ -2,3 +2,4 @@
 projects/project2/code/output/
 projects/project2/code/data/health-raw-2021.csv
 __pycache__/
+node_modules/
