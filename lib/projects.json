@@ -1,5 +1,13 @@
 [
   {
+    "title": "Bikewatching: Bluebikes Traffic Map",
+    "year": "2026",
+    "url": "https://weder1126.github.io/bikewatching/",
+    "image": "images/projects/bikewatching.jpg",
+    "alt": "Map of Boston and Cambridge with bike lanes in green and Bluebikes stations as circles colored by arrivals and departures at 8:30 AM",
+    "description": "DSC 106 Lab 7. An interactive Mapbox map of about 260,000 Bluebikes trips from March 2024. Circles are sized by station traffic and colored by whether riders mostly arrive or leave, and a slider filters trips by time of day. Built with Mapbox GL JS and D3."
+  },
+  {
     "title": "Health Spending: Persuasive or Deceptive?",
     "year": "2026",
     "url": "projects/project2/",
