@@ -12,17 +12,44 @@
     <h1>Meta</h1>
     <p>This page includes stats about the code of this website.</p>
 
+    <!-- Lab 8, Step 1.1: timeline slider -->
+    <div id="commit-filter">
+      <label>
+        Show commits until:
+        <input type="range" id="commit-progress" min="0" max="100" value="100" />
+        <time id="commit-max-time"></time>
+      </label>
+    </div>
+
     <section id="stats">
       <h2>Summary</h2>
       <!-- Filled in by main.js -->
     </section>
 
-    <section>
-      <h2>Commits by time of day</h2>
-      <div id="chart"></div>
-      <p id="selection-count">No commits selected</p>
-      <dl id="language-breakdown" class="stats"></dl>
-    </section>
+    <!-- Lab 8, Step 3: scrollytelling, commits over time -->
+    <h2>Commits by time of day</h2>
+    <div id="scrolly-1">
+      <div id="scatter-story"></div>
+      <div id="scatter-plot">
+        <div id="chart"></div>
+        <p id="selection-count">No commits selected</p>
+        <dl id="language-breakdown" class="stats"></dl>
+      </div>
+    </div>
+
+    <!-- Lab 8, Step 2 + 4: unit visualization of file sizes, one dot per line -->
+    <h2>Codebase evolution</h2>
+    <div id="scrolly-2">
+      <dl id="files">
+        <!-- Filled in by files.js:
+          <div>
+            <dt><code>file name</code><small>N lines</small></dt>
+            <dd><div class="loc"></div>...</dd>
+          </div>
+        -->
+      </dl>
+      <div id="files-story"></div>
+    </div>
 
     <dl id="commit-tooltip" class="info tooltip" hidden>
       <dt>Commit</dt>
